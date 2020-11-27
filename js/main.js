@@ -9,23 +9,30 @@ function generateNumber(min, max) {
   return Math.floor(Math.random()* (max - min) + min);
 };
 
-// function userPrompt(){
-//   for (var i = 0; i <5; i++) {
-//     parseInt(prompt("inserisci un numero"));
-//   }
-//  }
+function userPrompt(){
+  var arrayNumeriUtente = [];
 
-
-
-    var arrayNumeri = [];
-
-    for (var i = 0; i < 5; i++) {
-     var random = generateNumber(1, 50);
-     arrayNumeri.push(random);
-     console.log(arrayNumeri);
+  while (arrayNumeri.length < 5) {
+    var numeroCaso = generateNumber(1, 100);
+    if (arrayNumeri.includes(numeroCaso) == false) {
+      arrayNumeri.push(numeroCaso);
     }
+  }
+  }
+ }
+var arrayNumeri = [];
 
-    alert(arrayNumeri);
+while (arrayNumeri.length < 5) {
+  var numeroCaso = generateNumber(1, 100);
+  if (arrayNumeri.includes(numeroCaso) == false) {
+    arrayNumeri.push(numeroCaso);
+  }
+}
+alert(arrayNumeri);
+
+
+setTimeout(userPrompt, 4000);
+
 
 
   }
